@@ -6,7 +6,8 @@ body {
 	display: flex;
 	justify-content: center;
 	overflow-wrap: break-word;
-	background-image: radial-gradient(farthest-corner at -10% 200%,#590f16,#0b0b0b);
+	/* background-image: radial-gradient(farthest-corner at -10% 200%,#590f16,#0b0b0b); */
+	background:#0b0b0b;
 	color: #f2f2f2;
 	}
 
@@ -344,8 +345,7 @@ table {
 	width: 45rem;
 	/* width: 70ch; */
 	max-width: 90%;
-	margin: 1rem auto 1rem auto;
-	/* line-height: 1.6rem; */
+	/* margin: 1rem auto 1rem auto; */
 	}
 
 .table-wrapper {
@@ -535,7 +535,8 @@ div.full-width {
 
 
 div.total-width { 
-  width: 100vw;
+  width: 90%;
+	position: absolute;
   position: relative;
   left: 50%;
   right: 50%;
@@ -543,14 +544,39 @@ div.total-width {
   margin-right: -50vw;
 }
 
-.bg
-{
-	margin: 0 0 -1rem 0;
-	text-align:center;
-	position: absolute;
-    width: 100%;
+.image-width {
+	left: 49%;
+	margin-left: -51vw;
+	margin-top: -20vw;
+	max-width: 100vw;
+	position:absolute;
+	width: 100vw;
     z-index: -1;
-	display: inline-block; 
 	overflow: hidden;
-	opacity: 0.5;
+	opacity: 0.3;
+}
+
+/* Overwiritng my old fonts to test */
+html { font-size: 62.5%;  }
+table { font-size: 100% }
+body {
+    z-index: 0;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size: 1em;
+	line-height: 1.7em;
+}
+@media (max-width: 300px) {
+    html { font-size: 70%; }
+}
+
+@media (min-width: 500px) {
+    html { font-size: 80%; }
+}
+
+@media (min-width: 700px) {
+    html { font-size: 100%; }
+}
+
+@media (min-width: 1200px) {
+    html { font-size: 120%; }
 }
